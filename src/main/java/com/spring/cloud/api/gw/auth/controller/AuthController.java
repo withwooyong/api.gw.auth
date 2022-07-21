@@ -17,9 +17,10 @@ public class AuthController {
 
     private final AuthService authService;
 
-    @GetMapping(path = "/")
+    @GetMapping
     ResponseEntity<String> getHello() {
-        return ResponseEntity.ok("auth hello");
+        String hello = authService.getHello();
+        return ResponseEntity.ok(hello);
     }
 
     /**

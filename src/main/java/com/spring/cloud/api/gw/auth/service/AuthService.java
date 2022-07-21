@@ -8,6 +8,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class AuthService {
 
+    public String getHello() {
+        return "auth hello";
+    }
+
     public String getToken(String userName) {
         String s = RandomStringUtils.randomAlphabetic(10);
         log.info("random={}", s);
